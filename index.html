@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Solène — a cinematic Lagos dining experience. Modern African cuisine, hand-crafted cocktails, and an intimate lounge in the heart of Victoria Island." />
+<title>Solène · Lagos Luxe Dining & Lounge</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="script.js"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="grain">
+
+<!-- ===== NAV ===== -->
+<header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
+  <div class="max-w-7xl mx-auto px-5 md:px-10 py-5 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2">
+      <span class="font-display text-2xl tracking-wide text-bone">Sol<span class="text-bronze-500">è</span>ne</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-9 text-sm tracking-wide uppercase text-bone/80">
+      <a href="#story" class="gold-underline">Story</a>
+      <a href="#menu" class="gold-underline">Menu</a>
+      <a href="#gallery" class="gold-underline">Gallery</a>
+      <a href="#events" class="gold-underline">Events</a>
+      <a href="#visit" class="gold-underline">Visit</a>
+    </nav>
+    <a href="#reserve" class="btn-gold hidden md:inline-flex items-center gap-2 px-5 py-2.5 text-sm uppercase tracking-widest font-medium rounded-full">
+      Reserve
+      <svg class="w-3.5 h-3.5" viewBox="0 0 20 20" fill="none"><path d="M5 10h10M11 6l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <button id="menuBtn" class="md:hidden text-bone p-2" aria-label="Menu">
+      <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+
+  <!-- mobile menu -->
+  <div id="mobileMenu" class="md:hidden hidden bg-ink/95 backdrop-blur border-t border-bronze-500/20">
+    <div class="px-6 py-6 flex flex-col gap-5 text-bone uppercase tracking-widest text-sm">
+      <a href="#story" class="py-1">Story</a>
+      <a href="#menu" class="py-1">Menu</a>
+      <a href="#gallery" class="py-1">Gallery</a>
+      <a href="#events" class="py-1">Events</a>
+      <a href="#visit" class="py-1">Visit</a>
+      <a href="#reserve" class="btn-gold inline-flex justify-center px-5 py-3 rounded-full text-ink">Reserve a Table</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="relative min-h-screen flex items-center overflow-hidden">
+  <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2000&q=80"
+       alt="Candle-lit dining room"
+       class="hero-img absolute inset-0 w-full h-full object-cover" />
+  <div class="hero-overlay absolute inset-0"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-5 md:px-10 py-32 md:py-40 w-full">
+    <p class="reveal text-bronze-500 tracking-[0.4em] text-xs md:text-sm mb-6">VICTORIA ISLAND · LAGOS · EST. 2024</p>
+    <h1 class="reveal font-display text-5xl sm:text-6xl md:text-8xl leading-[1.02] max-w-4xl">
+      A quiet kind of <em class="italic text-bronze-500">luxury</em>,<br/>
+      after dark.
+    </h1>
+    <p class="reveal mt-8 max-w-xl text-bone/75 text-base md:text-lg leading-relaxed">
+      Solène is a cinematic dining room and lounge — modern West African plates, slow-fire kitchens, and cocktails poured beside warm vinyl and low gold light.
+    </p>
+
+    <div class="reveal mt-10 flex flex-wrap items-center gap-4">
+      <a href="#reserve" class="btn-gold px-7 py-3.5 rounded-full text-sm uppercase tracking-widest font-medium">Reserve a Table</a>
+      <a href="#menu" class="px-7 py-3.5 rounded-full text-sm uppercase tracking-widest border border-bone/30 hover:border-bronze-500 hover:text-bronze-500 transition">View the Menu</a>
+    </div>
+
+    <div class="reveal mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl">
+      <div>
+        <p class="font-display text-3xl text-bronze-500">7pm – 1am</p>
+        <p class="text-xs uppercase tracking-widest text-bone/60 mt-1">Tue – Sun</p>
+      </div>
+      <div>
+        <p class="font-display text-3xl text-bronze-500">12 Akin Adesola</p>
+        <p class="text-xs uppercase tracking-widest text-bone/60 mt-1">Victoria Island</p>
+      </div>
+      <div>
+        <p class="font-display text-3xl text-bronze-500">Live Sets</p>
+        <p class="text-xs uppercase tracking-widest text-bone/60 mt-1">Fri & Sat</p>
+      </div>
+      <div>
+        <p class="font-display text-3xl text-bronze-500">+234</p>
+        <p class="text-xs uppercase tracking-widest text-bone/60 mt-1">802 410 0099</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- scroll cue -->
+  <div class="absolute bottom-8 inset-x-0 flex justify-center z-10">
+    <a href="#story" class="text-bone/60 text-xs uppercase tracking-[0.3em] flex flex-col items-center gap-3">
+      Descend
+      <span class="w-px h-10 bg-gradient-to-b from-bronze-500 to-transparent"></span>
+    </a>
+  </div>
+</section>
+
+<!-- ===== TICKER ===== -->
+<div class="border-y border-bronze-500/20 bg-emerald-900/20 overflow-hidden py-5">
+  <div class="ticker-track flex gap-16 whitespace-nowrap font-display italic text-bone/50 text-2xl md:text-3xl">
+    <span>Modern West African</span><span class="text-bronze-500">✦</span>
+    <span>Slow-Fire Kitchen</span><span class="text-bronze-500">✦</span>
+    <span>Curated Cellar</span><span class="text-bronze-500">✦</span>
+    <span>Intimate Lounge</span><span class="text-bronze-500">✦</span>
+    <span>Live Sets Fri & Sat</span><span class="text-bronze-500">✦</span>
+    <span>Modern West African</span><span class="text-bronze-500">✦</span>
+    <span>Slow-Fire Kitchen</span><span class="text-bronze-500">✦</span>
+    <span>Curated Cellar</span><span class="text-bronze-500">✦</span>
+    <span>Intimate Lounge</span><span class="text-bronze-500">✦</span>
+    <span>Live Sets Fri & Sat</span><span class="text-bronze-500">✦</span>
+  </div>
+</div>
+
+<!-- ===== STORY ===== -->
+<section id="story" class="relative py-24 md:py-36 px-5 md:px-10">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 md:gap-24 items-center">
+    <div class="reveal relative">
+      <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=80" class="rounded-sm w-full object-cover aspect-[4/5]" alt="Chef plating" />
+      <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=600&q=80" class="hidden md:block absolute -bottom-12 -right-12 w-56 h-72 object-cover rounded-sm border-4 border-ink shadow-2xl" alt="Cocktail" />
+    </div>
+    <div class="reveal">
+      <p class="text-bronze-500 tracking-[0.35em] text-xs uppercase mb-5">Our Story</p>
+      <h2 class="font-display text-4xl md:text-6xl leading-tight">
+        Born from <em class="italic text-bronze-500">long evenings</em><br/>
+        and old recipes.
+      </h2>
+      <p class="mt-7 text-bone/75 leading-relaxed text-lg">
+        Solène began as a private supper club — twelve seats, one chef, and a record player. Today, the table is bigger, but the soul is the same: smoke, citrus, slow conversation, and dishes that taste like somewhere your grandmother once cooked.
+      </p>
+      <p class="mt-5 text-bone/70 leading-relaxed">
+        Every plate honours the West African pantry — egusi, suya spice, locust bean, bitter leaf — paired with technique drawn from Lyon, Lisbon and Dakar. The result is unmistakably Lagos, dressed for the evening.
+      </p>
+      <div class="mt-10 flex items-center gap-6">
+        <span class="font-display text-3xl text-bronze-500">— Chef Adaeze Iroka</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MENU ===== -->
+<section id="menu" class="relative py-24 md:py-36 px-5 md:px-10 bg-emerald-900/30 border-y border-bronze-500/10">
+  <div class="max-w-6xl mx-auto">
+    <div class="reveal text-center mb-14">
+      <p class="text-bronze-500 tracking-[0.35em] text-xs uppercase mb-5">The Menu</p>
+      <h2 class="font-display text-4xl md:text-6xl">An evening, in <em class="italic text-bronze-500">five movements</em></h2>
+      <p class="mt-5 text-bone/65 max-w-xl mx-auto">A seasonal tasting menu, with à la carte options. Updated every fortnight.</p>
+    </div>
+
+    <!-- tabs -->
+    <div class="reveal flex justify-center mb-12 overflow-x-auto no-scrollbar">
+      <div class="inline-flex gap-2 md:gap-3 p-1 border border-bronze-500/20 rounded-full">
+        <button data-tab="starters" class="tab tab-active px-5 md:px-7 py-2.5 text-xs md:text-sm uppercase tracking-widest border rounded-full transition">Starters</button>
+        <button data-tab="mains" class="tab px-5 md:px-7 py-2.5 text-xs md:text-sm uppercase tracking-widest border border-transparent rounded-full transition text-bone/60 hover:text-bone">Mains</button>
+        <button data-tab="cocktails" class="tab px-5 md:px-7 py-2.5 text-xs md:text-sm uppercase tracking-widest border border-transparent rounded-full transition text-bone/60 hover:text-bone">Cocktails</button>
+        <button data-tab="desserts" class="tab px-5 md:px-7 py-2.5 text-xs md:text-sm uppercase tracking-widest border border-transparent rounded-full transition text-bone/60 hover:text-bone">Desserts</button>
+      </div>
+    </div>
+
+    <div id="menu-panels" class="reveal">
+      <!-- STARTERS -->
+      <div data-panel="starters" class="grid md:grid-cols-2 gap-x-14 gap-y-8">
+        <div class="menu-item">
+          <div class="flex items-baseline justify-between gap-4">
+            <h3 class="font-display text-2xl">Suya Steak Tartare</h3>
+            <span class="font-display text-bronze-500">₦12,500</span>
+          </div>
+          <p class="text-bone/60 mt-2 leading-relaxed">Hand-cut beef, peanut suya spice, smoked yolk, plantain crisps.</p>
+        </div>
+        <div class="menu-item">
+          <div class="flex items-baseline justify-between gap-4">
+            <h3 class="font-display text-2xl">Ata Rodo Burrata</h3>
+            <span class="font-display text-bronze-500">₦11,000</span>
+          </div>
+          <p class="text-bone/60 mt-2 leading-relaxed">Creamy burrata, charred scotch bonnet honey, garden basil, sourdough.</p>
+        </div>
+        <div class="menu-item">
+          <div class="flex items-baseline justify-between gap-4">
+            <h3 class="font-display text-2xl">Smoked Catfish Croquettes</h3>
+            <span class="font-display text-bronze-500">₦9,800</span>
+          </div>
+          <p class="text-bone/60 mt-2 leading-relaxed">Riverine catfish, locust bean aioli, pickled okra.</p>
+        </div>
+        <div class="menu-item">
+          <div class="flex items-baseline justify-between gap-4">
+            <h3 class="font-display text-2xl">Coconut Pepper Soup</h3>
+            <span class="font-display text-bronze-500">₦8,500</span>
+          </div>
+          <p class="text-bone/60 mt-2 leading-relaxed">Lemongrass, uziza, prawn, young coconut cream.</p>
+        </div>
+      </div>
+
+      <!-- MAINS -->
+      <div data-panel="mains" class="hidden grid md:grid-cols-2 gap-x-14 gap-y-8">
+        <div class="menu-item">
+          <div class="flex items-baseline justify-between gap-4">
+            <h3 class="font-display text-2xl">Wagyu Brochette &middot; Yaji</h3>
+            <span class="font-display text-bronze-500">₦38,000</span>
+          </div>
+          <p class="text-bone/60 mt-2 leading-relaxed">Grade A5 wagyu, yaji rub, charred onion, jollof reduction.</p>
+        </div>
+        <div class="menu-item">
+          <div class="flex items-baseline justify-between gap-4">
+            <h3 class="font-display text-2xl">Whole Sea Bass &middot; Banga</h3>
+            <span class="font-display text-bronze-500">₦26,500</span>
+          </div>
+          <p class="text-bone/60 mt-2 leading-relaxed">Salt-baked bass, banga butter, charred plantain, mint.</p>
+        </div>
+        <div class="menu-item">
+          <div class="flex items-baseline justify-between gap-4">
+            <h3 class="font-display text-2xl">Egusi Risotto</h3>
+            <span class="font-display text-bronze-500">₦18,000</span>
+          </div>
+          <p class="text-bone/60 mt-2 leading-relaxed">Aged carnaroli, egusi cream, smoked goat, fried bitter leaf.</p>
+        </div>
+        <div class="menu-item">
+          <div class="flex items-baseline justify-between gap-4">
+            <h3 class="font-display text-2xl">Asun Lamb Shoulder</h3>
+            <span class="font-display text-bronze-500">₦29,000</span>
+          </div>
+          <p class="text-bone/60 mt-2 leading-relaxed">12-hour lamb, suya glaze, fonio pilaf, tamarind jus.</p>
+        </div>
+      </div>
+
+      <!-- COCKTAILS -->
+      <div data-panel="cocktails" class="hidden grid md:grid-cols-2 gap-x-14 gap-y-8">
+        <div class="menu-item">
+          <div class="flex items-baseline justify-between gap-4">
+            <h3 class="font-display text-2xl">Hibiscus Negroni</h3>
+            <span class="font-display text-bronze-500">₦7,500</span>
+          </div>
+          <p class="text-bone/60 mt-2 leading-relaxed">Zobo-infused gin, Campari, sweet vermouth, orange oil.</p>
+        </div>
+        <div class="menu-item">
+          <div class="flex items-baseline justify-between gap-4">
+            <h3 class="font-display text-2xl">Smoked Palm Old Fashioned</h3>
+            <span class="font-display text-bronze-500">₦8,200</span>
+          </div>
+          <p class="text-bone/60 mt-2 leading-relaxed">Bourbon, palm wine reduction, cedar smoke, bitters.</p>
+        </div>
+        <div class="menu-item">
+          <div class="flex items-baseline justify-between gap-4">
+            <h3 class="font-display text-2xl">Lagos Sour</h3>
+            <span class="font-display text-bronze-500">₦6,800</span>
+          </div>
+          <p class="text-bone/60 mt-2 leading-relaxed">Mezcal, tamarind, lime, scotch bonnet honey, salt rim.</p>
+        </div>
+        <div class="menu-item">
+          <div class="flex items-baseline justify-between gap-4">
+            <h3 class="font-display text-2xl">Coconut Espresso Martini</h3>
+            <span class="font-display text-bronze-500">₦7,200</span>
+          </div>
+          <p class="text-bone/60 mt-2 leading-relaxed">Vodka, cold brew, coconut cream, kola nut bitters.</p>
+        </div>
+      </div>
+
+      <!-- DESSERTS -->
+      <div data-panel="desserts" class="hidden grid md:grid-cols-2 gap-x-14 gap-y-8">
+        <div class="menu-item">
+          <div class="flex items-baseline justify-between gap-4">
+            <h3 class="font-display text-2xl">Chocolate Suya Tart</h3>
+            <span class="font-display text-bronze-500">₦6,500</span>
+          </div>
+          <p class="text-bone/60 mt-2 leading-relaxed">70% dark ganache, peanut yaji crumb, smoked vanilla cream.</p>
+        </div>
+        <div class="menu-item">
+          <div class="flex items-baseline justify-between gap-4">
+            <h3 class="font-display text-2xl">Plantain Tatin</h3>
+            <span class="font-display text-bronze-500">₦5,800</span>
+          </div>
+          <p class="text-bone/60 mt-2 leading-relaxed">Caramelised plantain, brown butter, crème fraîche.</p>
+        </div>
+        <div class="menu-item">
+          <div class="flex items-baseline justify-between gap-4">
+            <h3 class="font-display text-2xl">Hibiscus Sorbet</h3>
+            <span class="font-display text-bronze-500">₦4,200</span>
+          </div>
+          <p class="text-bone/60 mt-2 leading-relaxed">Zobo, lime, candied ginger, basil oil.</p>
+        </div>
+        <div class="menu-item">
+          <div class="flex items-baseline justify-between gap-4">
+            <h3 class="font-display text-2xl">Cheese Board</h3>
+            <span class="font-display text-bronze-500">₦9,500</span>
+          </div>
+          <p class="text-bone/60 mt-2 leading-relaxed">Aged West African selection, palm honey, walnut crackers.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="reveal text-center mt-14 text-bone/50 text-sm italic">A 7.5% VAT and 10% service charge will be added to your bill.</p>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section id="gallery" class="py-24 md:py-36 px-5 md:px-10">
+  <div class="max-w-7xl mx-auto">
+    <div class="reveal text-center mb-14">
+      <p class="text-bronze-500 tracking-[0.35em] text-xs uppercase mb-5">The Room</p>
+      <h2 class="font-display text-4xl md:text-6xl">Soft <em class="italic text-bronze-500">light</em>, slow nights</h2>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+      <div class="reveal overflow-hidden rounded-sm aspect-[3/4] md:row-span-2">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80" class="gallery-tile w-full h-full object-cover" alt="Dining room"/>
+      </div>
+      <div class="reveal overflow-hidden rounded-sm aspect-square">
+        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80" class="gallery-tile w-full h-full object-cover" alt="Plate"/>
+      </div>
+      <div class="reveal overflow-hidden rounded-sm aspect-square">
+        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=600&q=80" class="gallery-tile w-full h-full object-cover" alt="Dessert"/>
+      </div>
+      <div class="reveal overflow-hidden rounded-sm aspect-[3/4] md:row-span-2">
+        <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=900&q=80" class="gallery-tile w-full h-full object-cover" alt="Cocktail"/>
+      </div>
+      <div class="reveal overflow-hidden rounded-sm aspect-square">
+        <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=600&q=80" class="gallery-tile w-full h-full object-cover" alt="Bar"/>
+      </div>
+      <div class="reveal overflow-hidden rounded-sm aspect-square">
+        <img src="https://images.unsplash.com/photo-1432139509613-5c4255815697?auto=format&fit=crop&w=600&q=80" class="gallery-tile w-full h-full object-cover" alt="Lounge"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EVENTS ===== -->
+<section id="events" class="relative py-24 md:py-36 px-5 md:px-10 bg-emerald-900/30 border-y border-bronze-500/10 overflow-hidden">
+  <div class="max-w-7xl mx-auto">
+    <div class="reveal text-center mb-16">
+      <p class="text-bronze-500 tracking-[0.35em] text-xs uppercase mb-5">What's On</p>
+      <h2 class="font-display text-4xl md:text-6xl">Evenings worth <em class="italic text-bronze-500">remembering</em></h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <article class="reveal group relative overflow-hidden rounded-sm aspect-[4/5]">
+        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=900&q=80" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700" alt=""/>
+        <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-transparent"></div>
+        <div class="relative h-full flex flex-col justify-end p-7">
+          <p class="text-bronze-500 text-xs uppercase tracking-widest mb-2">Every Friday</p>
+          <h3 class="font-display text-3xl mb-2">Vinyl Nights</h3>
+          <p class="text-bone/70 text-sm">Curated jazz, soul and afrobeat sets from 9pm.</p>
+        </div>
+      </article>
+
+      <article class="reveal group relative overflow-hidden rounded-sm aspect-[4/5]">
+        <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=900&q=80" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700" alt=""/>
+        <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-transparent"></div>
+        <div class="relative h-full flex flex-col justify-end p-7">
+          <p class="text-bronze-500 text-xs uppercase tracking-widest mb-2">Last Sunday Monthly</p>
+          <h3 class="font-display text-3xl mb-2">Chef's Table</h3>
+          <p class="text-bone/70 text-sm">Eight seats. Seven courses. One unforgettable evening with Chef Adaeze.</p>
+        </div>
+      </article>
+
+      <article class="reveal group relative overflow-hidden rounded-sm aspect-[4/5]">
+        <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=900&q=80" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700" alt=""/>
+        <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-transparent"></div>
+        <div class="relative h-full flex flex-col justify-end p-7">
+          <p class="text-bronze-500 text-xs uppercase tracking-widest mb-2">By Reservation</p>
+          <h3 class="font-display text-3xl mb-2">Private Dining</h3>
+          <p class="text-bone/70 text-sm">Our hidden room seats 14 — built for proposals, deals and quiet celebrations.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIAL ===== -->
+<section class="py-24 md:py-32 px-5 md:px-10">
+  <div class="max-w-4xl mx-auto text-center reveal">
+    <svg class="w-12 h-12 mx-auto text-bronze-500 mb-8" viewBox="0 0 32 32" fill="currentColor"><path d="M0 18.5c0-7 4-13 11-17l2 3c-4 3-7 7-7 11h6v11H0V18.5zm17 0c0-7 4-13 11-17l2 3c-4 3-7 7-7 11h6v11H17V18.5z"/></svg>
+    <p class="font-display text-3xl md:text-5xl leading-snug italic">
+      "It feels like Lagos finally has a dining room that knows the difference between loud and luxurious."
+    </p>
+    <div class="ornament max-w-xs mx-auto mt-10"></div>
+    <p class="mt-6 uppercase tracking-[0.3em] text-sm text-bronze-500">BellaNaija · 2025</p>
+  </div>
+</section>
+
+<!-- ===== RESERVATION ===== -->
+<section id="reserve" class="relative py-24 md:py-36 px-5 md:px-10 overflow-hidden">
+  <div class="absolute inset-0 -z-10 opacity-40">
+    <img src="https://images.unsplash.com/photo-1592861956120-e524fc739696?auto=format&fit=crop&w=2000&q=80" class="w-full h-full object-cover" alt=""/>
+    <div class="absolute inset-0 bg-ink/85"></div>
+  </div>
+
+  <div class="max-w-3xl mx-auto">
+    <div class="reveal text-center mb-12">
+      <p class="text-bronze-500 tracking-[0.35em] text-xs uppercase mb-5">Reservations</p>
+      <h2 class="font-display text-4xl md:text-6xl">Save your <em class="italic text-bronze-500">seat</em></h2>
+      <p class="mt-5 text-bone/65">We open the book 30 days in advance. Most evenings sell out by Wednesday.</p>
+    </div>
+
+    <form id="resForm" class="reveal grid md:grid-cols-2 gap-5">
+      <input class="field rounded-sm px-5 py-4 md:col-span-2" placeholder="Full name" required />
+      <input class="field rounded-sm px-5 py-4" placeholder="Email" type="email" required />
+      <input class="field rounded-sm px-5 py-4" placeholder="Phone (+234...)" required />
+      <input class="field rounded-sm px-5 py-4" placeholder="Date" type="date" required />
+      <select class="field rounded-sm px-5 py-4" required>
+        <option value="" disabled selected class="bg-ink">Time</option>
+        <option class="bg-ink">7:00 PM</option>
+        <option class="bg-ink">7:30 PM</option>
+        <option class="bg-ink">8:00 PM</option>
+        <option class="bg-ink">8:30 PM</option>
+        <option class="bg-ink">9:00 PM</option>
+        <option class="bg-ink">9:30 PM</option>
+      </select>
+      <select class="field rounded-sm px-5 py-4 md:col-span-2" required>
+        <option value="" disabled selected class="bg-ink">Number of guests</option>
+        <option class="bg-ink">2 guests</option>
+        <option class="bg-ink">3 guests</option>
+        <option class="bg-ink">4 guests</option>
+        <option class="bg-ink">5 guests</option>
+        <option class="bg-ink">6+ guests (private dining)</option>
+      </select>
+      <textarea class="field rounded-sm px-5 py-4 md:col-span-2" rows="3" placeholder="Special requests (optional)"></textarea>
+      <button type="submit" class="btn-gold md:col-span-2 px-8 py-4 rounded-full uppercase tracking-widest text-sm font-medium">Request Reservation</button>
+      <p id="resOk" class="hidden md:col-span-2 text-center text-bronze-500 text-sm">Thank you. We'll confirm by email within the hour.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ===== VISIT ===== -->
+<section id="visit" class="py-24 md:py-32 px-5 md:px-10 border-t border-bronze-500/10">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-start">
+    <div class="reveal">
+      <p class="text-bronze-500 tracking-[0.35em] text-xs uppercase mb-5">Visit</p>
+      <h2 class="font-display text-4xl md:text-5xl mb-8">Find the <em class="italic text-bronze-500">door</em></h2>
+
+      <div class="space-y-7 text-bone/80">
+        <div>
+          <p class="text-xs uppercase tracking-widest text-bronze-500 mb-1">Address</p>
+          <p class="text-lg">12 Akin Adesola Street, Victoria Island, Lagos.</p>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-widest text-bronze-500 mb-1">Hours</p>
+          <p class="text-lg">Tuesday – Thursday · 7pm – 12am</p>
+          <p class="text-lg">Friday – Saturday · 7pm – 2am</p>
+          <p class="text-lg">Sunday · 6pm – 11pm</p>
+          <p class="text-lg text-bone/50">Closed Mondays</p>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-widest text-bronze-500 mb-1">Contact</p>
+          <p class="text-lg">+234 802 410 0099</p>
+          <p class="text-lg">hello@solene.lagos</p>
+        </div>
+        <div class="flex gap-4 pt-2">
+          <a href="#" class="w-11 h-11 inline-flex items-center justify-center border border-bone/20 rounded-full hover:border-bronze-500 hover:text-bronze-500 transition">IG</a>
+          <a href="#" class="w-11 h-11 inline-flex items-center justify-center border border-bone/20 rounded-full hover:border-bronze-500 hover:text-bronze-500 transition">FB</a>
+          <a href="#" class="w-11 h-11 inline-flex items-center justify-center border border-bone/20 rounded-full hover:border-bronze-500 hover:text-bronze-500 transition">TT</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal rounded-sm overflow-hidden border border-bronze-500/20">
+      <iframe
+        src="https://www.openstreetmap.org/export/embed.html?bbox=3.412%2C6.426%2C3.430%2C6.438&layer=mapnik&marker=6.4321%2C3.4205"
+        class="w-full aspect-square md:aspect-[4/5] grayscale contrast-125 brightness-75"
+        loading="lazy"
+        title="Solène on the map"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="border-t border-bronze-500/15 px-5 md:px-10 py-14 mt-10">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-10 items-start">
+    <div>
+      <p class="font-display text-3xl">Sol<span class="text-bronze-500">è</span>ne</p>
+      <p class="text-bone/55 mt-3 text-sm leading-relaxed max-w-xs">A cinematic dining room and lounge in Victoria Island, Lagos.</p>
+    </div>
+    <div class="text-sm text-bone/65 space-y-2">
+      <p class="text-bronze-500 uppercase tracking-widest text-xs mb-3">Explore</p>
+      <a href="#story" class="block hover:text-bronze-500">Story</a>
+      <a href="#menu" class="block hover:text-bronze-500">Menu</a>
+      <a href="#events" class="block hover:text-bronze-500">Events</a>
+      <a href="#reserve" class="block hover:text-bronze-500">Reserve</a>
+    </div>
+    <div class="text-sm text-bone/65">
+      <p class="text-bronze-500 uppercase tracking-widest text-xs mb-3">Newsletter</p>
+      <p class="mb-3">Letters from the kitchen. Once a month.</p>
+      <form class="flex gap-2">
+        <input type="email" placeholder="your@email.com" class="field rounded-full px-4 py-2.5 text-sm flex-1"/>
+        <button class="btn-gold px-5 py-2.5 rounded-full text-xs uppercase tracking-widest">Join</button>
+      </form>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto mt-12 pt-6 border-t border-bone/10 flex flex-col md:flex-row gap-3 justify-between text-xs text-bone/40">
+    <p>© 2026 Solène Lagos. All rights reserved.</p>
+    <p>Crafted in Lagos · By a small studio.</p>
+  </div>
+</footer>
+
+</body>
+</html>
