@@ -1,32 +1,4 @@
-tailwind.config = {
-    theme: {
-      extend: {
-        fontFamily: {
-          serif: ['"Playfair Display"', 'serif'],
-          sans: ['Inter', 'system-ui', 'sans-serif']
-        },
-        colors: {
-          ink: '#0b0b0b',
-          bone: '#f4ece1',
-          cream: '#efe6d6',
-          emerald: {
-            900: '#08231b',
-            800: '#0f3a2e',
-            700: '#155742'
-          },
-          bronze: {
-            500: '#c9a872',
-            600: '#b8945c',
-            700: '#8a6b3f'
-          },
-          wine: '#5a1024'
-        }
-      }
-    }
-  };
-
-/* ---- next block ---- */
-
+document.addEventListener('DOMContentLoaded', () => {
 // mobile menu
   const menuBtn = document.getElementById('menuBtn');
   const mobileMenu = document.getElementById('mobileMenu');
@@ -73,3 +45,4 @@ tailwind.config = {
     e.target.querySelectorAll('input, select, textarea, button').forEach(el => el.disabled = true);
     document.getElementById('resOk').classList.remove('hidden');
   });
+});

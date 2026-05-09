@@ -11,8 +11,32 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
 <script src="https://cdn.tailwindcss.com"></script>
-<script src="script.js"></script>
-
+<script>tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          serif: ['"Playfair Display"', 'serif'],
+          sans: ['Inter', 'system-ui', 'sans-serif']
+        },
+        colors: {
+          ink: '#0b0b0b',
+          bone: '#f4ece1',
+          cream: '#efe6d6',
+          emerald: {
+            900: '#08231b',
+            800: '#0f3a2e',
+            700: '#155742'
+          },
+          bronze: {
+            500: '#c9a872',
+            600: '#b8945c',
+            700: '#8a6b3f'
+          },
+          wine: '#5a1024'
+        }
+      }
+    }
+  };</script>
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -498,5 +522,6 @@
   </div>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
